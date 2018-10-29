@@ -1,0 +1,25 @@
+<!--pages/search/search.wxml-->
+<view id='search'>
+  <view class='search_btn'>
+    <input type="digit" placeholder="请输入搜索内容" confirm-type='search' bindchange="handleSearch"/>
+  </view>
+  <view wx:if='{{!loading}}' class='nodata'>暂无内容...</view>
+  <block wx:else>
+    <view class='search_title'>{{searchMsg.title}}</view>
+    <view class='search_item' wx:for="{{ searchMsg.subjects }}" wx:for-index="index" wx:key="id">
+      <navigator url="/pages/details/details?movieNum={{item.id}}" open-type="navigate" hover-class="other-navigator-hover">
+        <image src="{{item.images.medium}}" mode='widthFix' class='rankimg'></image>
+        <view class='rank_right'>
+          <text class='rank_info'>{{item.title}} / {{item.original_title}}</text>
+          <text class='rank_info'>导演：{{item.directors[0].name}}</text>
+          <view class='rank_info'>
+            <text>主演：</text>
+            <text wx:for="{{ item.casts }}" wx:for-index="index" wx:key="id">{{item.name}},</text>
+          </view>
+          <text class='rank_info'>{{item.rating.average}}分</text>
+          <text class='rank_info'>{{item.year}}  / {{item.genres}}</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>

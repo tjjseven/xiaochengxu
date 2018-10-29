@@ -1,0 +1,26 @@
+/* pages/center/center.wxss */
+#top250{
+  font-size: 12px;
+}
+.rankimg{
+  width: 30%;
+}
+.rank_item{
+  padding: 20rpx;
+  border-bottom:1px solid #c5c5c5;
+}
+.rank_right{
+  width: 65%;
+  margin-left:5%; 
+  display: inline-block;
+  vertical-align: top;
+}
+.rank_info{
+  display: block;
+  word-break: break-all;
+  margin-bottom: 15rpx;
+}
+.loadMore{
+  text-align: center;
+  padding: 10px 0;
+}

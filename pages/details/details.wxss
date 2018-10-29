@@ -1,0 +1,44 @@
+/* pages/details.wxss */
+#details{
+  font-size: 12px;
+  word-break: break-all
+}
+.details_info{
+  display: block;
+  margin: 20rpx 20rpx 0;
+  line-height: 18px;
+}
+.details_cast{
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.details_name{
+  color:#0f60d2;
+  font-size: 16px;
+  margin-bottom: 25rpx;
+}
+.details_bor{
+  padding-top: 30rpx;
+  border-top:1px solid #c5c5c5;
+}
+.details_con{
+  line-height: 50rpx;
+  text-indent: 24px;
+  margin-bottom:20rpx;
+}
+.details_tags{
+  margin: 0 20rpx 20rpx;
+}
+.details_tag{
+  background: #c5c5c5;
+  color: #fff;
+  margin-right: 10rpx;
+  padding:2px;
+}
+image{
+  width:100%;
+}

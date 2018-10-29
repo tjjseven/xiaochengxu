@@ -1,0 +1,32 @@
+/* pages/about/about.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border:1px solid #ccc;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 100px;
+}
+.defaultColor{
+  color:red;
+}
+.clickColor{
+  color:blue;
+}
+.aboutImg{
+  width: 202px;
+  height: 202px;
+}

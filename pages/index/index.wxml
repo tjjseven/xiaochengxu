@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view id='index'>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:for-index="index" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode='widthFix'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+  <button bindtap="changeAutoplay"> autoplay </button>
+  <slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+  <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration -->
+
+  <view class='title'><icon type="waiting" size="15" color="#0f60d2" style='margin:0 5px 0 0'/>正在上映的电影</view>
+  <view class="flex-wrap">
+    <view class="flex-item" wx:for="{{ inMovie.subjects }}" wx:for-index="index" wx:key="id">
+      <navigator url="/pages/details/details?movieNum={{item.id}}" open-type="navigate" hover-class="other-navigator-hover">
+        <image src="{{item.images.medium}}" mode='widthFix' class='img'></image>
+        <view class='flex-text'>
+          <text>{{item.title}}</text>
+          <text class='rating'>评分：{{item.rating.average}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='title'><icon type="waiting" size="15" color="#0f60d2" style='margin:0 5px 0 0'/>即将上映的电影</view>
+  <view class="flex-wrap">
+    <view class="flex-item" wx:for="{{ inMovie.subjects }}" wx:for-index="index" wx:key="id">
+      <navigator url="/pages/details/details?movieNum={{item.id}}" open-type="navigate" hover-class="other-navigator-hover">
+        <image src="{{item.images.medium}}" mode='widthFix' class='img'></image>
+        <view class='flex-text'>
+          <text>{{item.title}}</text>
+          <text class='rating'>评分：{{item.rating.average}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

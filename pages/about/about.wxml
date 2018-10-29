@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <!-- <open-data type="userNickName"></open-data> -->
+    <!-- <open-data type="userAvatarUrl"></open-data> -->
+    <!-- <open-data type="userGender" lang="zh_CN"></open-data> -->
+    <!-- <open-data type="userCity" lang="zh_CN"></open-data> -->
+    <navigator url='/pages/h5/h5'>h5点赞</navigator>
+  </view>
+  <image class='aboutImg' src='{{aboutImg}}'></image>
+  <view class="usermotto">
+    <text catchtap="click" class="{{color}}">微信小程序</text>
+  </view>
+</view>

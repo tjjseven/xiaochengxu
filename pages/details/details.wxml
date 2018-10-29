@@ -1,0 +1,25 @@
+<!--pages/details.wxml-->
+<view id='details'>
+  <image src='{{movieDet.image}}' mode='widthFix'></image>
+  <view>
+    <text class='details_info details_name'>{{movieDet.alt_title}} / {{movieDet.title}}</text>
+    <text class='details_info'>导演：{{movieDet.attrs.director}}</text>
+    <text class='details_info'>编剧：{{movieDet.attrs.writer}}</text>
+    <text class='details_info details_cast'>主演：{{movieDet.attrs.cast}}</text>
+    <text class='details_info'>国家：{{movieDet.attrs.country}}</text>
+    <text class='details_info'>语言：{{movieDet.attrs.language}}</text>
+    <text class='details_info'>时长：{{movieDet.attrs.movie_duration}}</text>
+    <text class='details_info'>类型：{{movieDet.attrs.movie_type}}</text>
+    <text class='details_info'>上映：{{movieDet.attrs.pubdate}}</text>
+    <text class='details_info'>年份：{{movieDet.attrs.year}}</text>
+    <view class='details_info details_bor'>
+      <view class='details_name'>剧情简介:</view>
+      <view class='details_con'>{{movieDet.summary}}</view>
+    </view>
+    <view class='details_bor details_tags'>
+      <view class='details_name'>标签</view>
+      <text class='details_tag' wx:for="{{ movieDet.tags }}" wx:for-index="index" wx:key="id">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,40 @@
+/**index.wxss**/
+swiper{
+  margin-bottom: 50rpx;
+}
+.title{
+  margin: 15rpx;
+  height: 20px;
+  line-height: 20px;
+}
+icon{
+  height: 20px;
+  vertical-align: middle;
+}
+.flex-wrap{
+  display: flex;
+  flex-wrap:wrap;
+  margin-top: 20rpx;
+  justify-content: flex-start;
+}
+.flex-item{
+  /* flex: 1; */
+  width: 33%;
+  box-sizing: border-box;
+  text-align: center;
+  border:1px solid #fff; 
+  margin:0 0 50rpx 2rpx;
+  font-size: 0;
+}
+.img,.slide-image{
+  width: 100%;
+}
+.flex-text{
+  font-size: 12px;
+  margin:20rpx 0 0 0;
+}
+.rating{
+  display: block;
+  margin-top: 10rpx;
+  color: #5f5f5f;
+}
